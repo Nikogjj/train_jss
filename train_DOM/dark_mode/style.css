@@ -9,7 +9,7 @@ body .dark_mode{
 color: white;
 }
 main.dark_mode{
-    background-color: black;
+    background-color: rgb(43, 43, 43);
 }
 .main{
     height: 100vh;

@@ -1,20 +1,19 @@
-const div_boutton_dark_mode = document.querySelector(".boutton_click");
-const icon = document.querySelector(".boutton_click>i")
+const tab_css = document.querySelectorAll("body *");
+// console.log(tab_css);
+const tab_div_boutton_click = document.querySelectorAll("main>.boutton_click");
 
-div_boutton_dark_mode.addEventListener("click",()=>{
-    console.log("oui")
-    const boutton_dark_mode = div_boutton_dark_mode.querySelector(".boutton");
-    boutton_dark_mode.classList.toggle("boutton_left");
-    setTimeout(() => {
-        icon.classList.toggle("fa-moon")   
-    }, 300);
-    // icon.classList.toggle("fa-moon")
-    const main = document.querySelector(".main");
-    main.classList.toggle("dark_mode");
-
-    const tab_div = document.querySelectorAll("main>div")
-    console.log(tab_div)
-    tab_div.forEach(function(balise){
-        balise.classList.toggle("dark_mode");
+tab_div_boutton_click.forEach((div_boutton)=>{
+    div_boutton.addEventListener("click",()=>{
+        tab_css.forEach((balise)=>{
+            if (balise == div_boutton.querySelector(".boutton")) {
+                for (let i = 0; i < tab_div_boutton_click.length; i++) {
+                    const boutton = tab_div_boutton_click[i].querySelector(".boutton") ;
+                    const icon = tab_div_boutton_click[i].querySelector("i") ;
+                    boutton.classList.toggle("boutton_left");
+                    icon.classList.toggle("fa-moon");
+                }
+            }
+            balise.classList.toggle("dark_mode");
+        });
     });
 })
