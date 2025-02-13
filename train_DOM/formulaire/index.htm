@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <h2>Formulaire</h2>
+        <form class="containeur_formulaire" action="https://www.youtube.com/">
+            <div class="info_formulaire">
+                <p>Prenom</p>
+                <input type="text" placeholder="Prenom" name="prenom">
+                <div class="error_input_none error_input prenom">
+                    <p>Ce champs doit contenir entre 2 et 20 caracteres</p>
+                </div>
+            </div>
+            <div class="info_formulaire">
+                <p>Nom</p>
+                <input type="text" placeholder="Nom" name="nom">
+                <div class="error_input_none error_input nom">
+                    <p>Ce champs doit contenir entre 2 et 20 caracteres</p>
+                </div>
+            </div>
+            <div class="info_formulaire">
+                <p>Adresse mail</p>
+                <input type="email" placeholder="Adresse mail" name="mail">
+                <div class="error_input_none error_input mail">
+                    <p>mail invalide</p>
+                </div>
+            </div>
+            <div class="info_formulaire">
+                <p>Message</p>
+                <input type="text" placeholder="Message" name="msg">
+                <div class="error_input_none error_input msg">
+                    <p>Ce champs doit contenir entre 2 et 20 caracteres</p>
+                </div>
+            </div>
+            <input type="submit" value="Envoyer vos informations">
+        </form>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
