@@ -9,4 +9,12 @@ div_boutton_dark_mode.addEventListener("click",()=>{
         icon.classList.toggle("fa-moon")   
     }, 300);
     // icon.classList.toggle("fa-moon")
+    const main = document.querySelector(".main");
+    main.classList.toggle("dark_mode");
+
+    const tab_div = document.querySelectorAll("main>div")
+    console.log(tab_div)
+    tab_div.forEach(function(balise){
+        balise.classList.toggle("dark_mode");
+    });
 })

@@ -1,9 +1,15 @@
 *{
     box-sizing: border-box;
-    border: solid 1px red;
+    /* border: solid 1px red;/ */
 }
 body{
     margin: 0;
+}
+body .dark_mode{
+color: white;
+}
+main.dark_mode{
+    background-color: black;
 }
 .main{
     height: 100vh;
@@ -12,7 +18,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 213, 213);
+    background-color: rgb(255, 255, 255);
     gap: 1rem;
 
 }
@@ -26,6 +32,9 @@ body{
     width: 25%;
     padding: 1rem 2.5rem 1rem 2.5rem;
 }
+.carte.dark_mode{
+    background-color: rgb(130, 130, 130);
+}
 .carte h2{
     margin: 0;
 }
@@ -37,11 +46,20 @@ body{
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    min-width: 150px;
-    min-height: 30px;
-    background-color: rgb(148, 148, 248);
+    width: 100px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
     border-radius: 3rem;
     position: relative;
+    border: 3px solid black;
+}
+.boutton_click.dark_mode{
+    background-color: rgb(0, 0, 0);
+    border: 3px solid rgb(255, 255, 255);
+}
+.boutton_click.dark_mode i{
+    /* transition: color 1s; */
+    color: rgb(255, 255, 255);
 }
 .boutton_click i{
     display: flex;
@@ -49,20 +67,21 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    color: rgb(0, 0, 0);
+    /* transition: color 1s; */
 }
 .boutton{
     position: absolute;
     left: 0%;
-    background-color: white;
+    background-color: rgb(139, 139, 139);
     border-radius: 50%;
-    width: 30px;
+    width: 25px;
     height:100%;
-    /* aspect-ratio: 1 1; */
     transition: translate 1s;
 }
-.boutton_left{
-    translate: 120px;
+.boutton.darkmode{
+    background-color: black;
 }
-.fa-sun{
-    
+.boutton_left{
+    translate: 70px;
 }
